@@ -71,7 +71,7 @@ namespace InteractiveQuizz
             foreach (var answer in answers)
             {
                 inputResponses = responses[scoringIndex];
-                Console.WriteLine($"{scoringIndex + 1}. User response: {inputResponses} | Correct answer: {answers[scoringIndex]}");
+                Console.WriteLine($"{scoringIndex + 1}. Your response: {inputResponses} | Correct answer: {answers[scoringIndex]}");
                 if (inputResponses == answers[scoringIndex])
                 {
                     score++;
