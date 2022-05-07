@@ -15,8 +15,16 @@ namespace InteractiveQuizz
             string entry = Console.ReadLine();
 
 
-            string[] questions = new string[] { "Spanish is the spoken language in Portugal", "Switzerland is a member of the European Free Trade Area (EFTA)." };
-            bool[] answers = new bool[] { false, true };
+            string[] questions = new string[] { "Spanish is the native language in Portugal", "Switzerland is a member of the European Free Trade Area (EFTA).", "In Brazil, the native language is Brazilian" };
+            bool[] correctAnswers = new bool[] { false, true, false };
+
+            RunQuiz(questions, correctAnswers);
+
+
+        }
+
+        static void RunQuiz(string[] questions, bool[] answers )
+        {
             bool[] responses = new bool[questions.Length];
 
             if (responses.Length != answers.Length)
@@ -73,8 +81,6 @@ namespace InteractiveQuizz
             }
 
             Console.WriteLine($"You've got {score} correct answers out of {questions.Length}!");
-
-
         }
     }
 }
